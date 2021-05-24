@@ -1,0 +1,43 @@
+<div class="container" style="margin-bottom:20px;padding-top:20px;">
+    <div class="row">
+        <div class="col-sm-12 btn btn-success">
+            Event's Information
+        </div>
+    </div>
+    <div class="col-sm-12" style="margin-bottom:20px;padding-top:20px;">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-primary" data-toggle="modal" routerLink="/create" style="margin:5px;">
+                    Add New Event
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="padding-top:20px;">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <th>Tittle</th>
+            <th>Price</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of this.eve">
+                <td>{{e.Tittle}}</td>
+                <td>{{e.Price}}</td>
+                <td>{{e.Location}}</td>
+                <td>{{e.Date}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary mr-1" style="margin:5px;"
+                         routerLink="/home">Edit</button>
+                    <button type="button" class="btn btn-danger mr-1" style="margin:5px;"
+                         routerLink="/home">Delete</button>
+                         <button type="button" class="btn btn-primary mr-1" style="margin:5px;"
+                         routerLink="/home">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
